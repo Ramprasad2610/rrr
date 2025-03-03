@@ -1,0 +1,302 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e8f0f2;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+/* App Layout */
+.app {
+  padding: 30px;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #FF6347; /* Contrasting Tomato color */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #FFD700; /* Contrasting yellow for hover */
+  color: #333;
+}
+
+.nav-link:active {
+  background-color: #ff4500;
+}
+
+/* Sign-Up Form */
+.sign-up-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  opacity: 0;
+  animation: slideIn 1s forwards ease-out;
+  border: 2px solid #FF6347; /* Contrasting border color */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #FF6347; /* Bright contrasting color */
+}
+
+.sign-up-btn {
+  padding: 12px 20px;
+  background-color: #4CAF50; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.sign-up-btn:hover {
+  background-color: #45a049;
+}
+
+/* Restaurant and Menu Cards */
+.restaurant-list,
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  justify-content: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.restaurant-card,
+.menu-item-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 230px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: slideUp 0.5s forwards ease-out;
+  border: 2px solid #ddd; /* Adding a subtle border */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restaurant-card:hover,
+.menu-item-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-color: #FF6347; /* Adding a border highlight on hover */
+}
+
+.emoji {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.restaurant-info,
+.menu-item-info {
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #777;
+}
+
+button {
+  background-color: #FF6347; /* Contrasting button color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #e53e1e; /* Darker shade on hover */
+}
+
+/* Cart Section */
+.cart-section {
+  background-color: #FFF5EE; /* Light background with a warm tone */
+  padding: 40px 30px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.cart {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #FF6347;
+}
+
+.cart-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #FF6347; /* Contrasting title color */
+}
+
+.cart-item {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+  border: 2px solid #ddd;
+}
+
+.cart-item:hover {
+  transform: scale(1.03);
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-info {
+  font-size: 16px;
+}
+
+.remove-item-btn {
+  background-color: #FF4500; /* Contrasting red for remove button */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-item-btn:hover {
+  background-color: #d73819; /* Darker red shade */
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cart-total-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-btn {
+  background-color: #32CD32; /* Bright green for checkout */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.checkout-btn:hover {
+  background-color: #28a828; /* Darker green on hover */
+}
+
+/* Smooth Transition for Background Color */
+body:focus-within {
+  background-color: #F0FFFF; /* Light cyan background when focus is on an input */
+}
